@@ -2,7 +2,7 @@ public class VariablesTheme {
     
     public static void main(String[] args) {
         System.out.println("Задача 1 \"Вывод характеристик компьютера\"");
-        boolean isUserMan = true;
+        boolean maleGender = true;
         byte cpuCores = 4;
         short ramBanks = 2;
         int cpuFrequency = 2_100_000_000;
@@ -10,7 +10,7 @@ public class VariablesTheme {
         char firstSignOfBrand = 'H';
         float ramAvailable = 5.5F;
         double hddAvailable = 165.745268987D;
-        System.out.println("Пользователь является человеком: " + isUserMan + 
+        System.out.println("Пользователем является мужчина?: " + maleGender + 
                 "\nЧисло ядер процессора: " + cpuCores + 
                 "\nЧисло банков оперативной памяти: " + ramBanks + 
                 "\nЧастота процессора в Гц: " + cpuFrequency + 
@@ -33,58 +33,48 @@ public class VariablesTheme {
                 "J  J  aaaaa  V V  aaaaa    \n JJ  a     a  V  a     a");
 
         System.out.println("\nЗадача 4 \"Вывод min и max значений целых числовых типов\"");
-        byte minByte = -128;
         byte maxByte = 127;
-        short minShort = -32768;
         short maxShort = 32767;
-        int minInt = -2147483648;
         int maxInt = 2147483647;
-        long minLong = -9223372036854775808L;
         long maxLong = 9223372036854775807L;
-        System.out.println(minByte + " " + maxByte + " " + (++minByte) + " " + (--maxByte));
-        System.out.println(minShort + " " + maxShort + " " + (++minShort) + " " + (--maxShort));
-        System.out.println(minInt + " " + maxInt + " " + (++minInt) + " " + (--maxInt));
-        System.out.println(minLong + " " + maxLong + " " + (++minLong) + " " + (--maxLong));
+        System.out.println(maxByte + " " + (++maxByte) + " " + (--maxByte));
+        System.out.println(maxShort + " " + (++maxShort) + " " + (--maxShort));
+        System.out.println(maxInt + " " + (++maxInt) + " " + (--maxInt));
+        System.out.println(maxLong + " " + (++maxLong) + " " + (--maxLong));
 
         System.out.println("\nЗадача 5 \"Перестановка значений переменных\"");
-        int firstOne = 2;
-        int secondOne = 5;
-        int thirdOne = 0;
-        System.out.print("с помощью третьей переменной; исходные " + "первая = " + firstOne + 
-                ", вторая = " + secondOne);
-        thirdOne = firstOne;
-        firstOne = secondOne;
-        secondOne = thirdOne;
-        System.out.println("; измененные " + "первая = " + firstOne + ", вторая = " + secondOne);
-        System.out.print("с помощью арифметических операций; исходные " + "первая = " + firstOne + 
-                ", вторая = " + secondOne);
-        firstOne += secondOne;
-        secondOne = firstOne - secondOne;
-        firstOne -= secondOne;
-        System.out.println("; измененные " + "первая = " + firstOne + ", вторая = " + secondOne);
-        System.out.print("с помощью побитовой операции ^; исходные " + "первая = " + firstOne + 
-                ", вторая = " + secondOne);
-        firstOne ^= secondOne;
-        secondOne ^= firstOne;
-        firstOne ^= secondOne;
-        System.out.println("; измененные " + "первая = " + firstOne + ", вторая = " + secondOne);
+        int number1 = 2;
+        int number2 = 5;
+        int temp = number1;
+        System.out.print("с помощью третьей переменной; исходные " + "первая = " + number1 + 
+                ", вторая = " + number2);
+        number1 = number2;
+        number2 = temp;
+        System.out.println("; измененные " + "первая = " + number1 + ", вторая = " + number2);
+        System.out.print("с помощью арифметических операций; исходные " + "первая = " + number1 + 
+                ", вторая = " + number2);
+        number1 += number2;
+        number2 = number1 - number2;
+        number1 -= number2;
+        System.out.println("; измененные " + "первая = " + number1 + ", вторая = " + number2);
+        System.out.print("с помощью побитовой операции ^; исходные " + "первая = " + number1 + 
+                ", вторая = " + number2);
+        number1 ^= number2;
+        number2 ^= number1;
+        number1 ^= number2;
+        System.out.println("; измененные " + "первая = " + number1 + ", вторая = " + number2);
 
         System.out.println("\nЗадача 6 \"Вывод символов и их кодов\"");
-        byte codeOne = 35;
-        byte codeTwo = 38;
-        byte codeThree = 64;
-        byte codeFour = 94;
-        byte codeFive = 95;
-        char charOne = (char) codeOne;
-        char charTwo = (char) codeTwo;
-        char charThree = (char) codeThree;
-        char charFour = (char) codeFour;
-        char charFive = (char) codeFive;
-        System.out.println(codeOne + " " + charOne);
-        System.out.println(codeTwo + " " + charTwo);
-        System.out.println(codeThree + " " + charThree);
-        System.out.println(codeFour + " " + charFour);
-        System.out.println(codeFive + " " + charFive);
+        char sharp = 35;
+        char ampersand = 38;
+        char at = 64;
+        char caret = 94;
+        char underscore1 = 95;
+        System.out.println((int) sharp + " " + sharp);
+        System.out.println((int) ampersand + " " + ampersand);
+        System.out.println((int) at + " " + at);
+        System.out.println((int) caret + " " + caret);
+        System.out.println((int) underscore1 + " " + underscore1);
 
         System.out.println("\nЗадача 7 \"Вывод в консоль ASCII-арт Дюка\"");
         char slash = '/';
@@ -103,11 +93,11 @@ public class VariablesTheme {
         int srcNumber = 123;
         int hundreds = srcNumber / 100;
         int tens = (srcNumber % 100) / 10;
-        int units = srcNumber % 10;
-        int product = hundreds * tens * units;
-        int sum = hundreds + tens + units;
+        int ones = srcNumber % 10;
+        int product = hundreds * tens * ones;
+        int sum = hundreds + tens + ones;
         System.out.println("Число " + srcNumber + " содержит:\n" + 
-                hundreds + " сотен\n" + tens + " десятков\n" + units + " единиц\n" + 
+                hundreds + " сотен\n" + tens + " десятков\n" + ones + " единиц\n" + 
                 "Сумма его цифр = " + sum + "\nПроизведение = " + product);
 
         System.out.println("\nЗадача 9 \"Вывод времени\"");
@@ -116,6 +106,5 @@ public class VariablesTheme {
         int minutes = (srcTimeSec % 3600) / 60;
         int seconds = srcTimeSec % 60;
         System.out.println(hours + ":" + minutes + ":" + seconds);
-
     }
 }
