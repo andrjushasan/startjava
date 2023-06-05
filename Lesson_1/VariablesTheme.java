@@ -65,11 +65,11 @@ public class VariablesTheme {
         System.out.println("; измененные " + "первая = " + number1 + ", вторая = " + number2);
 
         System.out.println("\nЗадача 6 \"Вывод символов и их кодов\"");
-        char sharp = 35;
-        char ampersand = 38;
-        char at = 64;
-        char caret = 94;
-        char underscore1 = 95;
+        char sharp = '#';
+        char ampersand = '&';
+        char at = '@';
+        char caret = '^';
+        char underscore1 = '_';
         System.out.println((int) sharp + " " + sharp);
         System.out.println((int) ampersand + " " + ampersand);
         System.out.println((int) at + " " + at);
@@ -103,7 +103,7 @@ public class VariablesTheme {
         System.out.println("\nЗадача 9 \"Вывод времени\"");
         int srcTimeSec = 86399;
         int hours = srcTimeSec / 3600;
-        int minutes = (srcTimeSec % 3600) / 60;
+        int minutes = (srcTimeSec / 60) % 60;
         int seconds = srcTimeSec % 60;
         System.out.println(hours + ":" + minutes + ":" + seconds);
     }
