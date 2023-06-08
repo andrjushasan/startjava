@@ -65,5 +65,47 @@ public class CyclesTheme {
         }
         System.out.println(", сумма цифр = " + sumDigits);
 
+        System.out.println("\nЗадача 4 \"Вывод чисел на консоль в несколько строк\"");
+        int minInterval = 1;
+        int maxInterval = 24;
+        int stepIteration = 2;
+        int numberDigitsInLine = 5;
+        int digitPrint = minInterval;
+        int counter4 = minInterval;
+        while(counter4 < maxInterval) {
+            for(int i = 0; i < numberDigitsInLine; i++) {
+                System.out.printf("%2d ", digitPrint);
+                counter4 += stepIteration;
+                if(counter4 < maxInterval) {
+                    digitPrint = counter4;
+                } else {
+                    digitPrint = 0;
+                }
+            }
+            System.out.println();
+        }
+
+        System.out.println("\nЗадача 5 \"Проверка количества двоек на четность/нечетность\"");
+        int givenNumber5 = 3242592;
+        int digit5 = 0;
+        int counterOfTwo = 0;
+        System.out.print("число " + givenNumber5);
+        while(givenNumber5 > 0) {
+            digit5 = givenNumber5 % 10;
+            if(digit5 == 2) {
+                counterOfTwo++;
+            }
+            givenNumber5 /= 10;
+        }
+        System.out.print(" содержит " + counterOfTwo);
+        if(counterOfTwo % 2 == 0) {
+            System.out.print(" (четное)");
+        } else {
+            System.out.print(" (нечетное)");
+        }
+        System.out.println(" количество двоек");
+
+        System.out.println("\nЗадача 6 \"Отображение фигур в консоли\"");
+
     }
 }
