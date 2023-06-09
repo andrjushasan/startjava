@@ -170,7 +170,6 @@ public class CyclesTheme {
         int tempNumber = anyNumber;
         int tempDigit = tempNumber % 10;
         int reversedAnyNumber = 0;
-        // переворачиваю anyNumber
         reversedAnyNumber += tempDigit;
         tempNumber /= 10;
         while (tempNumber > 0) {
@@ -179,7 +178,6 @@ public class CyclesTheme {
             reversedAnyNumber += tempDigit;
             tempNumber /= 10;
         }
-        // переворачиваю reversedAnyNumber чтобы склеить тройки и посчитать суммы троек-половинок
         tempNumber = reversedAnyNumber;
         while (tempNumber > 0) {
             if (counter9 == 0) {
@@ -239,6 +237,5 @@ public class CyclesTheme {
                 }
             }
         }
-
     }
 }
