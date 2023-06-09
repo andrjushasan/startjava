@@ -106,6 +106,42 @@ public class CyclesTheme {
         System.out.println(" количество двоек");
 
         System.out.println("\nЗадача 6 \"Отображение фигур в консоли\"");
+        char asterisk = '*';
+        int numberSharps = 5;
+        int numberDollars = 1;
+        for(int i = 0; i < 5; i++) {
+            for(int j = 0; j < 10; j++) {
+                System.out.print(asterisk);
+            }
+            System.out.println();
+        }
+        while(numberSharps > 0) {
+            System.out.printf("%." + numberSharps + "s%n", "#####");
+            numberSharps --;
+        }
+        do {
+                System.out.printf("%." + numberDollars + "s%n", "$$$$");
+                numberDollars ++;
+            } while(numberDollars < 3);
+        do {
+                System.out.printf("%." + numberDollars + "s%n", "$$$$");
+                numberDollars --;
+        } while(numberDollars > 0);
+
+        System.out.println("\nЗадача 7 \"Отображение ASCII-символов\"");
+        System.out.printf("%7s%10s%n", "DECIMAL", "CHARACTER");
+        for(int i = 0; i <= 47; i ++) {
+            if(i % 2 != 0) {
+                System.out.printf("%7d%10s%n", i, (char) i);
+            }
+        }
+        for(int i = 97; i <= 122; i ++) {
+            if(i % 2 == 0) {
+                System.out.printf("%7d%10s%n", i, (char) i);
+            }
+        }
+
+        System.out.println("\nЗадача 8 \"Проверка, является ли число палиндромом\"");
 
     }
 }
