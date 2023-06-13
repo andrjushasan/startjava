@@ -178,7 +178,7 @@ public class IfElseStatementTheme {
                     onesRequired = sumProcessed;
                     onesAvailable -= onesRequired;
                 }
-            } else {/*if 100 bankn is NOT enough*/
+            } else {
                 hundredsRequired = hundredsAvailable;
                 hundredsAvailable -= hundredsRequired;
                 sumProcessed -= hundredsRequired * 100;
@@ -187,7 +187,7 @@ public class IfElseStatementTheme {
                     tensAvailable -= tensRequired;
                     onesRequired = sumProcessed - tensRequired * 10;
                     onesAvailable -= onesRequired;
-                } else {/*if 10 bankn is NOT enough!!!!*/
+                } else {
                     tensRequired = tensAvailable;
                     tensAvailable -= tensRequired;
                     sumProcessed -= tensRequired * 10;
@@ -200,6 +200,5 @@ public class IfElseStatementTheme {
             System.out.printf("%n%10d%10d%10d", hundredsRequired, tensRequired, onesRequired);
             System.out.printf("%n%s%d%s", "Выдаваемая сумма: ", sumRequested, " USD");
         }
-
     }
 }
