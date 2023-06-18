@@ -55,7 +55,7 @@ public class IfElseStatementTheme {
                 System.out.println(" положительным");
             }
         } else {
-            System.out.println(" нулём");
+            System.out.println(" " + anyNumber);
         }
 
         System.out.println("\nЗадача 4 \"Поиск одинаковых цифр в числах\"");
@@ -84,7 +84,7 @@ public class IfElseStatementTheme {
 
         System.out.println("\n\nЗадача 5 \"Определение символа по его коду\"");
         char char5 = '\u0057';
-        System.out.print(char5);//
+        System.out.print(char5);
         if (char5 >= 'a' && char5 <= 'z') {
             System.out.println(", маленькая буква");
         } else if (char5 >= 'A' && char5 <= 'Z') {
