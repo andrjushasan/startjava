@@ -14,7 +14,7 @@ public class CyclesTheme {
             };
             counter++;
         } while (counter <= maxSection);
-        System.out.println("в промежутке [" + minSection + "," + maxSection + 
+        System.out.println("в промежутке [" + minSection + ", " + maxSection + 
                 "] сумма четных чисел = " + evenCount + ", а нечетных = " + oddCount);
 
         System.out.println("\nЗадача 2 \"Вывод чисел в интервале (min и max) в порядке убывания\"");
@@ -107,18 +107,18 @@ public class CyclesTheme {
 
         System.out.println("\nЗадача 6 \"Отображение фигур в консоли\"");
         char asterisk = '*';
-        int numberSharps = 5;
-        int numberDollars = 1;
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 10; j++) {
                 System.out.print(asterisk);
             }
             System.out.println();
         }
+        int numberSharps = 5;
         while (numberSharps > 0) {
             System.out.printf("%." + numberSharps + "s%n", "#####");
             numberSharps --;
         }
+        int numberDollars = 1;
         do {
             System.out.printf("%." + numberDollars + "s%n", "$$$$");
             numberDollars ++;
@@ -130,12 +130,15 @@ public class CyclesTheme {
 
         System.out.println("\nЗадача 7 \"Отображение ASCII-символов\"");
         System.out.printf("%7s%10s%n", "DECIMAL", "CHARACTER");
-        for (int i = 0; i <= 47; i ++) {
+        char zero = '0';
+        for (int i = 0; i < (int) zero; i ++) {
             if(i % 2 != 0) {
                 System.out.printf("%7d%10s%n", i, (char) i);
             }
         }
-        for (int i = 97; i <= 122; i ++) {
+        char aLetter = 'a';
+        char zLetter = 'z';
+        for (int i = (int) aLetter; i <= (int) zLetter; i ++) {
             if(i % 2 == 0) {
                 System.out.printf("%7d%10s%n", i, (char) i);
             }
@@ -154,19 +157,14 @@ public class CyclesTheme {
             reverseNumber += digit8;
             processNumber /= 10;
         }
-        if (givenNumber8 == reverseNumber) {
-            System.out.println("число " + givenNumber8 + " является палиндромом");
-        } else {
-            System.out.println("число " + givenNumber8 + " не является палиндромом");
+        System.out.print("число " + givenNumber8);
+        if (givenNumber8 != reverseNumber) {
+            System.out.print(" не");
         }
+        System.out.println(" является палиндромом");
 
         System.out.println("\nЗадача 9 \"Определение, является ли число счастливым\"");
         int anyNumber = 123456;
-        int digitsFirst = 0;
-        int digitsLast = 0;
-        int sumDigitsFirst = 0;
-        int sumDigitsLast = 0;
-        int counter9 = 0;
         int tempNumber = anyNumber;
         int tempDigit = tempNumber % 10;
         int reversedAnyNumber = 0;
@@ -179,6 +177,11 @@ public class CyclesTheme {
             tempNumber /= 10;
         }
         tempNumber = reversedAnyNumber;
+        int digitsFirst = 0;
+        int digitsLast = 0;
+        int sumDigitsFirst = 0;
+        int sumDigitsLast = 0;
+        int counter9 = 0;
         while (tempNumber > 0) {
             if (counter9 == 0) {
                 tempDigit = tempNumber % 10;
@@ -207,11 +210,11 @@ public class CyclesTheme {
         }
         System.out.println("Сумма цифр " + digitsFirst + " = " + sumDigitsFirst);
         System.out.println("Сумма цифр " + digitsLast + " = " + sumDigitsLast);
-        if (sumDigitsFirst == sumDigitsLast) {
-            System.out.println("число является счастливым");
-        } else {
-            System.out.println("число не является счастливым");
+        System.out.print("число");
+        if (sumDigitsFirst != sumDigitsLast) {
+            System.out.print(" не");
         }
+        System.out.println(" является счастливым");
 
         System.out.println("\nЗадача 10 \"Вывод таблицы умножения Пифагора\"");
         for (int i = 0; i < 10; i ++) {
