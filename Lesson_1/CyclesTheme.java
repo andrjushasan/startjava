@@ -3,19 +3,19 @@ public class CyclesTheme {
         System.out.println("Задача 1 \"Подсчет суммы четных и нечетных чисел\"");
         int start = -10;
         int finish = 21;
-        int evenCount = 0;
-        int oddCount = 0;
+        int sumEvens = 0;
+        int sumOdds = 0;
         int counter = start;
         do {
             if (counter % 2 == 0) {
-                evenCount += counter;
+                sumEvens += counter;
             } else {
-                oddCount += counter;
+                sumOdds += counter;
             };
             counter++;
         } while (counter <= finish);
         System.out.println("в промежутке [" + start + ", " + finish + 
-                "] сумма четных чисел = " + evenCount + ", а нечетных = " + oddCount);
+                "] сумма четных чисел = " + sumEvens + ", а нечетных = " + sumOdds);
 
         System.out.println("\nЗадача 2 \"Вывод чисел в интервале (min и max) в порядке убывания\"");
         int number1 = 10;
@@ -92,16 +92,18 @@ public class CyclesTheme {
             }
             System.out.println();
         }
+        System.out.println();
         int numberSymbols = 5;
         while (numberSymbols > 0) {
             System.out.printf("%." + numberSymbols + "s%n", "#####");
             numberSymbols --;
         }
+        System.out.println();
         numberSymbols = 1;
         do {
             System.out.printf("%." + numberSymbols + "s%n", "$$$$");
             numberSymbols ++;
-            } while (numberSymbols < 3);
+        } while (numberSymbols < 3);
         do {
             System.out.printf("%." + numberSymbols + "s%n", "$$$$");
             numberSymbols --;
@@ -123,8 +125,7 @@ public class CyclesTheme {
         System.out.println("\nЗадача 8 \"Проверка, является ли число палиндромом\"");
         int givenNumber8 = 1234321;
         int copyNumber8 = givenNumber8;
-        int reverseNumber = copyNumber8 % 10;
-        copyNumber8 /= 10;
+        int reverseNumber = 0;
         while (copyNumber8 > 0) {
             reverseNumber = reverseNumber * 10 + copyNumber8 % 10;
             copyNumber8 /= 10;
@@ -142,20 +143,12 @@ public class CyclesTheme {
         int sumDigitsFirst = 0;
         int counter9 = 0;
         while (copyNumber9 > 0) {
-            switch (counter9) {
-            case (0):
-            case (1):
-            case (2):
+            if (counter9 < 3) {
                 sumDigitsLast += copyNumber9 % 10;
-                copyNumber9 /= 10;
-                break;
-            case (3):
-            case (4):
-            case (5):
+            } else {
                 sumDigitsFirst += copyNumber9 % 10;
-                copyNumber9 /= 10;
-                break;
             }
+            copyNumber9 /= 10;
             counter9++;
         }
         System.out.printf("%s%.3s%s%d%n", "Сумма цифр ", givenNumber9, " = ", sumDigitsFirst);
@@ -167,15 +160,11 @@ public class CyclesTheme {
         System.out.println(" является счастливым");
 
         System.out.println("\nЗадача 10 \"Вывод таблицы умножения Пифагора\"");
-        for (int i = 0; i < 10; i ++) {
+        System.out.printf("%s%n", "   |  2  3  4  5  6  7  8  9");
+        System.out.printf("%s", "---|------------------------");
+        for (int i = 2; i < 10; i ++) {
             for (int j = 0; j < 10; j ++) {
-                if (i == 0 && j == 0) {
-                    System.out.printf("%s%n", "   |  2  3  4  5  6  7  8  9");
-                    j = 10;
-                } else if (i == 1 && j == 0) {
-                    System.out.printf("%s", "---|------------------------");
-                    j = 10;
-                } else if (j == 0) {
+                if (j == 0) {
                     System.out.printf("%n%2d", i);
                 } else if (j == 1) {
                     System.out.printf("%2s", "|");
