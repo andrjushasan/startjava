@@ -52,16 +52,12 @@ public class CyclesTheme {
         int start4 = 1;
         int finish4 = 24;
         int numberDigitsInLine = 5;
-        int digitPrint = start4;
-        int counter4 = start4;
-        while (counter4 < finish4) {
-            for (int i = 0; i < numberDigitsInLine; i++) {
-                System.out.printf("%2d ", digitPrint);
-                counter4 += 2;
-                if (counter4 < finish4) {
-                    digitPrint = counter4;
+        for(int i = start4; i < finish4;) {
+            for(int j = 0; j < numberDigitsInLine; j++, i += 2) {
+                if (i < finish4) {
+                    System.out.printf("%2d ", i);
                 } else {
-                    digitPrint = 0;
+                    System.out.printf("%2d ", 0);
                 }
             }
             System.out.println();
@@ -92,13 +88,13 @@ public class CyclesTheme {
             }
             System.out.println();
         }
-        System.out.println();
+
         int numberSymbols = 5;
         while (numberSymbols > 0) {
             System.out.printf("%." + numberSymbols + "s%n", "#####");
             numberSymbols --;
         }
-        System.out.println();
+
         numberSymbols = 1;
         do {
             System.out.printf("%." + numberSymbols + "s%n", "$$$$");
